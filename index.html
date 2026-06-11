@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>音躍 - 新手表演者客戶管理 CRM</title>
+    <meta
+      name="description"
+      content="音躍-JUMPING NOTE 概念延伸的靜態 demo：新手表演者演出客戶管理 CRM。"
+    >
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <div class="stage-light stage-light-a" aria-hidden="true"></div>
+    <div class="stage-light stage-light-b" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="brand-lockup" aria-label="音躍後台 CRM">
+        <span class="brand-mark">JN</span>
+        <div>
+          <p class="eyebrow">Backstage CRM for first gigs</p>
+          <h1>音躍</h1>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <span class="live-chip">112 年・第二梯次成功案例</span>
+        <a class="source-link" href="https://ssp.moe.gov.tw/cases/909" target="_blank" rel="noreferrer">官方來源</a>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <section class="source-strip" aria-labelledby="source-title">
+        <div>
+          <p class="eyebrow">公開案例資訊</p>
+          <h2 id="source-title">音躍 - 最適合新手表演者的客戶管理系統</h2>
+        </div>
+        <dl class="source-grid">
+          <div>
+            <dt>比賽來源</dt>
+            <dd>大專校院創新創業實戰模擬學習平臺</dd>
+          </div>
+          <div>
+            <dt>團隊/公司</dt>
+            <dd>音躍-JUMPING NOTE</dd>
+          </div>
+          <div>
+            <dt>學校</dt>
+            <dd>中國文化大學</dd>
+          </div>
+          <div>
+            <dt>類別</dt>
+            <dd>服務文創</dd>
+          </div>
+        </dl>
+        <p class="disclaimer">這是依公開得獎資訊與概念自行製作的興趣原型，不是原團隊官方 demo 或產品。</p>
+      </section>
+
+      <section class="status-console" aria-label="工作台總覽">
+        <div class="console-copy">
+          <p class="eyebrow">Tonight's desk</p>
+          <h2>新手表演者的演出接案後台</h2>
+        </div>
+        <div class="meter-row" aria-hidden="true">
+          <span style="--level: 74%"></span>
+          <span style="--level: 38%"></span>
+          <span style="--level: 88%"></span>
+          <span style="--level: 56%"></span>
+          <span style="--level: 66%"></span>
+          <span style="--level: 44%"></span>
+        </div>
+        <div class="metric-grid" id="metricGrid"></div>
+      </section>
+
+      <div class="workbench">
+        <aside class="left-rail" aria-labelledby="clients-title">
+          <div class="rail-header">
+            <p class="eyebrow">Client crate</p>
+            <h2 id="clients-title">客戶卡片</h2>
+          </div>
+          <div class="client-list" id="clientList"></div>
+        </aside>
+
+        <section class="main-board" aria-label="CRM 管線與案件">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Booking signal chain</p>
+              <h2>演出詢價管線</h2>
+            </div>
+            <div class="filter-pills" role="group" aria-label="管線篩選">
+              <button class="filter-pill is-active" type="button" data-filter="all">全部</button>
+              <button class="filter-pill" type="button" data-filter="hot">快到期</button>
+              <button class="filter-pill" type="button" data-filter="money">待收款</button>
+            </div>
+          </div>
+          <div class="pipeline-board" id="pipelineBoard"></div>
+
+          <section class="detail-stage" aria-labelledby="detail-title">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Selected act</p>
+                <h2 id="detail-title">案件控制台</h2>
+              </div>
+              <span class="tiny-note" id="autosaveNote">本機暫存已開啟</span>
+            </div>
+            <div class="deal-detail" id="dealDetail"></div>
+          </section>
+        </section>
+
+        <aside class="right-rail" aria-label="日曆與收款">
+          <section class="rail-block">
+            <div class="rail-header">
+              <p class="eyebrow">Show calendar</p>
+              <h2>演出日曆</h2>
+            </div>
+            <div class="calendar-list" id="calendarList"></div>
+          </section>
+
+          <section class="rail-block">
+            <div class="rail-header">
+              <p class="eyebrow">Payment cue</p>
+              <h2>收款提醒</h2>
+            </div>
+            <div class="payment-list" id="paymentList"></div>
+          </section>
+        </aside>
+      </div>
+
+      <section class="lower-desk" aria-label="訊息與回饋">
+        <div class="template-deck">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Message patchbay</p>
+              <h2>訊息模板</h2>
+            </div>
+            <select id="templateSelect" aria-label="選擇訊息模板"></select>
+          </div>
+          <textarea id="templateText" rows="8" aria-label="訊息內容"></textarea>
+          <div class="template-actions">
+            <button class="primary-action" type="button" id="copyTemplate">複製訊息</button>
+            <span class="toast" id="toast" role="status" aria-live="polite"></span>
+          </div>
+        </div>
+
+        <div class="feedback-deck">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">After-show notes</p>
+              <h2>演後回饋</h2>
+            </div>
+          </div>
+          <form class="feedback-form" id="feedbackForm">
+            <label>
+              評分
+              <select id="feedbackScore" aria-label="回饋評分">
+                <option value="5">5 - 非常滿意</option>
+                <option value="4">4 - 滿意</option>
+                <option value="3">3 - 普通</option>
+                <option value="2">2 - 待改善</option>
+                <option value="1">1 - 需追蹤</option>
+              </select>
+            </label>
+            <label>
+              備註
+              <input id="feedbackText" type="text" maxlength="80" placeholder="例：希望下次增加爵士段落">
+            </label>
+            <button class="primary-action" type="submit">加入回饋</button>
+          </form>
+          <div class="feedback-list" id="feedbackList"></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
