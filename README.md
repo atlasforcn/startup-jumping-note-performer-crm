@@ -1,5 +1,21 @@
 # 音躍 - 最適合新手表演者的客戶管理系統
 
+## 快速看懂
+
+![startup-jumping-note-performer-crm 功能截圖](docs/preview.png)
+
+- 線上 Demo：https://atlasforcn.github.io/startup-jumping-note-performer-crm/
+- 這個原型在做什麼：把音躍做成新手表演者演出客戶管理 CRM。
+- 特色定位：特色是把接案管線、演出準備、合約報價與演後回饋都包進音樂工作者場景。
+- 操作流程：整理演出詢價與客戶卡片 → 追蹤報價、合約、曲目與設備需求 → 管理演出日曆、收款提醒與演後回饋
+
+<details>
+<summary>展開完整功能流程截圖</summary>
+
+![startup-jumping-note-performer-crm 完整功能流程截圖](docs/flow.png)
+
+</details>
+
 這是一個可直接用瀏覽器開啟的純前端靜態 demo，將「音躍-JUMPING NOTE」公開案例概念延伸成新手表演者使用的後台 CRM 工作台。介面以舞台後台與音樂工作室為視覺語彙，聚焦在接案、演出準備、客戶維繫與演後追蹤。
 
 ## 比賽與來源資訊
