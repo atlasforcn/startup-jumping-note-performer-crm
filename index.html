@@ -12,6 +12,40 @@
     <script defer src="app.js"></script>
   </head>
   <body>
+    <!-- repo-snapshot:start -->
+    <section class="repo-snapshot repo-snapshot--music" aria-label="專案辨識預覽：音躍" style="--snap-bg: #111016; --snap-bg-2: #2c1c34; --snap-ink: #fff8f5; --snap-muted: #d6c7d4; --snap-accent: #ff4d8d; --snap-accent-2: #f3c84b;">
+      <div class="snapshot-copy">
+        <p class="snapshot-kicker">Performer CRM stage</p>
+        <div class="snapshot-name">音躍</div>
+        <p class="snapshot-tagline">表演者客戶、檔期、報價與舞台燈光一起出現，讓 CRM 不再像普通管理頁。</p>
+        <div class="snapshot-chips" aria-label="核心辨識元素">
+        <span>演出檔期</span>
+        <span>客戶追蹤</span>
+        <span>報價流程</span>
+        </div>
+      </div>
+      <div class="snapshot-scene" aria-hidden="true">
+        <div class="snapshot-device">
+          <div class="snapshot-device-head">
+            <span>Booking pipeline</span>
+            <strong>週末婚禮演出</strong>
+          </div>
+          <div class="snapshot-visual snapshot-visual--music">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="snapshot-data-row">
+          <span><b>6</b>案源</span>
+          <span><b>3</b>待報價</span>
+          <span><b>72k</b>月收</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- repo-snapshot:end -->
+    <div class="demo-boundary" role="note">
+      <strong>Prototype</strong>
+      <span>靜態互動原型；畫面資料、評分、AI、金流、醫療、法律與安全流程皆為示範，不代表原團隊官方產品或實際服務。</span>
+    </div>
     <div class="stage-light stage-light-a" aria-hidden="true"></div>
     <div class="stage-light stage-light-b" aria-hidden="true"></div>
 
@@ -30,31 +64,33 @@
     </header>
 
     <main class="app-shell">
-      <section class="source-strip" aria-labelledby="source-title">
-        <div>
-          <p class="eyebrow">公開案例資訊</p>
-          <h2 id="source-title">音躍 - 最適合新手表演者的客戶管理系統</h2>
+      <details class="source-strip source-disclosure" aria-labelledby="source-title">
+        <summary>
+          <span class="eyebrow">公開案例資訊</span>
+          <strong id="source-title">音躍 - JUMPING NOTE</strong>
+        </summary>
+        <div class="source-body">
+          <dl class="source-grid">
+            <div>
+              <dt>比賽來源</dt>
+              <dd>大專校院創新創業實戰模擬學習平臺</dd>
+            </div>
+            <div>
+              <dt>團隊/公司</dt>
+              <dd>音躍-JUMPING NOTE</dd>
+            </div>
+            <div>
+              <dt>學校</dt>
+              <dd>中國文化大學</dd>
+            </div>
+            <div>
+              <dt>類別</dt>
+              <dd>服務文創</dd>
+            </div>
+          </dl>
+          <p class="disclaimer">這是依公開得獎資訊與概念自行製作的興趣原型，不是原團隊官方 demo 或產品。</p>
         </div>
-        <dl class="source-grid">
-          <div>
-            <dt>比賽來源</dt>
-            <dd>大專校院創新創業實戰模擬學習平臺</dd>
-          </div>
-          <div>
-            <dt>團隊/公司</dt>
-            <dd>音躍-JUMPING NOTE</dd>
-          </div>
-          <div>
-            <dt>學校</dt>
-            <dd>中國文化大學</dd>
-          </div>
-          <div>
-            <dt>類別</dt>
-            <dd>服務文創</dd>
-          </div>
-        </dl>
-        <p class="disclaimer">這是依公開得獎資訊與概念自行製作的興趣原型，不是原團隊官方 demo 或產品。</p>
-      </section>
+      </details>
 
       <section class="status-console" aria-label="工作台總覽">
         <div class="console-copy">
